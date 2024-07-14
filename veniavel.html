@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Stroke Example</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Define the item's stroke properties
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 4;
+        
+        // Draw a circle with the stroke properties
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI * 2);
+        ctx.stroke();
+    </script>
+</body>
+</html>

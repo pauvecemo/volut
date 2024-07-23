@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Example</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="400" style="border: 1px solid black;"></canvas>
+  <script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Define an item with bounds
+    const item = {
+      bounds: {
+        x: 50,
+        y: 100,
+        width: 200,
+        height: 150
+      }
+    };
+
+    // Draw the item on the canvas using its bounds
+    function drawItem(ctx, item) {
+      const { x, y, width, height } = item.bounds;
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(x, y, width, height);
+    }
+
+    // Call the draw function
+    drawItem(ctx, item);
+  </script>
+</body>
+</html>
